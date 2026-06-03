@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+// 1. Adicione o Navigate aqui nos imports
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import Home from './pages/home.jsx'
 import Sobre from './pages/sobre.jsx'
 import Servicos from './pages/servicos.jsx';
@@ -10,6 +11,11 @@ import Contato from './pages/contato.jsx';
 import './index.css'
 
 const router = createBrowserRouter([
+  {
+    // 2. Rota raiz que redireciona para /home
+    path: "/",
+    element: <Navigate to="/home" replace />,
+  },
   {
     path: "/home",
     element: <Home />,
@@ -27,8 +33,8 @@ const router = createBrowserRouter([
     element: <Obras />,
   },
   { 
-  path: "/diferenciais",  
-  element: <Diferenciais />,
+    path: "/diferenciais",  
+    element: <Diferenciais />,
   },
   { 
     path: "/contato",
