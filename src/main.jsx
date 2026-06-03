@@ -1,18 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// 1. Adicione o Navigate aqui nos imports
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
+// Trocamos o createBrowserRouter por createHashRouter
+import { createHashRouter, RouterProvider, Navigate } from 'react-router-dom'
 import Home from './pages/home.jsx'
 import Sobre from './pages/sobre.jsx'
-import Servicos from './pages/servicos.jsx';
-import Obras from './pages/obras.jsx';
-import Diferenciais from './pages/diferenciais.jsx';
-import Contato from './pages/contato.jsx';
+import Servicos from './pages/servicos.jsx'
+import Obras from './pages/obras.jsx'
+import Diferenciais from './pages/diferenciais.jsx'
+import Contato from './pages/contato.jsx'
 import './index.css'
 
-const router = createBrowserRouter([
+// O HashRouter vai criar URLs no formato: yago04.github.io/seu-repositorio/#/home
+const router = createHashRouter([
   {
-    // 2. Rota raiz que redireciona para /home
     path: "/",
     element: <Navigate to="/home" replace />,
   },
