@@ -1,7 +1,6 @@
 import { FaBuilding, FaAward, FaUsers } from 'react-icons/fa';
-import { FiArrowRight } from 'react-icons/fi';
 import Navbar from '../components/navbar';
-import Footer from '../components/footer'; // Importado para manter a consistência de navegação
+import Footer from '../components/footer';
 
 export default function Sobre() {
   return (
@@ -55,7 +54,7 @@ export default function Sobre() {
               </p>
             </div>
 
-            {/* Coluna Imagem Ilustrativa Técnica (Direita) */}
+            {/* Coluna Bloco Técnico Comercial (Direita) - Correção do "15+" */}
             <div className="md:col-span-5 relative group w-full">
               {/* Efeito de borda luminosa decorativa por trás do bloco */}
               <div className="absolute -inset-2 bg-gradient-to-tr from-[#a17a38]/20 to-transparent rounded-2xl opacity-50 blur-lg group-hover:opacity-100 transition-opacity duration-500" />
@@ -65,15 +64,15 @@ export default function Sobre() {
                 <div className="absolute top-0 bottom-0 left-1/2 w-[1px] bg-neutral-800/40" />
                 <div className="absolute left-0 right-0 top-1/2 h-[1px] bg-neutral-800/40" />
                 
-                {/* Número Gigante Estilizado */}
+                {/* Ajuste do Número para nitidez total e contraste elevado */}
                 <div className="relative z-10 space-y-1">
-                  <span className="block text-6xl font-black font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-[#d4af37]/40 to-transparent">
+                  <span className="block text-7xl font-black font-mono tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-[#d4af37] to-[#a17a38] drop-shadow-[0_4px_12px_rgba(212,175,55,0.15)]">
                     15+
                   </span>
-                  <span className="block text-xs font-bold uppercase tracking-[0.2em] text-neutral-300">
+                  <span className="block text-xs font-bold uppercase tracking-[0.2em] text-gray-200 mt-2">
                     Anos de Atuação
                   </span>
-                  <span className="block text-[11px] text-neutral-500 max-w-[180px] mx-auto mt-2 leading-relaxed">
+                  <span className="block text-[11px] text-neutral-400 max-w-[180px] mx-auto mt-2 leading-relaxed">
                     Transformando plantas técnicas em realidades estruturais.
                   </span>
                 </div>
